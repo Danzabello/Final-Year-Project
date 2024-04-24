@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete Dublin Core Metadata Form</title>
+    <link rel="stylesheet" href="/css/dublinCoreStyle.css">
+    <script src="/js/dublinCoreScript.js" defer></script>
+</head>
+<body>
+    <form id="metadataForm">
+        <!-- Each field in the form will have an associated tooltip -->
+        
+        <!-- Identifier -->
+        <label for="identifier">Identifier (URI): <span class="required-star">*</span>
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">A unique reference to the resource within a given context.</span>
+            </span>
+        </label>
+        <input type="text" id="identifier" name="dc:identifier" required>
+
+        <!-- Title -->
+        <label for="title">Title: <span class="required-star">*</span>
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">The name given to the resource.</span>
+            </span>
+        </label>
+        <input type="text" id="title" name="dc:title" required>
+
+        <!-- Alternative Title -->
+        <label for="alternative">Alternative Title:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">An alternative name for the resource.</span>
+            </span>
+        </label>
+        <input type="text" id="alternative" name="dcterms:alternative">
+
+        <!-- Creator -->
+        <label for="creator">Creator: <span class="required-star">*</span>
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">The entity primarily responsible for making the resource.</span>
+            </span>
+        </label>
+        <input type="text" id="creator" name="dc:creator" required>
+
+        <!-- Creation Date -->
+        <label for="created">Date Created: <span class="required-star">*</span>
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">The date of creation of the resource in the format YYYY-MM-DD.</span>
+            </span>
+        </label>
+        <input type="text" id="created" name="dcterms:created" pattern="\d{4}-\d{2}-\d{2}" required>
+
+        <!-- Issued Date -->
+        <label for="issued">Date Issued:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">The date of formal issuance of the resource in the format YYYY-MM-DD.</span>
+            </span>
+        </label>
+        <input type="text" id="issued" name="dcterms:issued" pattern="\d{4}-\d{2}-\d{2}">
+
+        <!-- Description -->
+        <label for="description">Description:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">An account of the resource.</span>
+            </span>
+        </label>
+        <textarea id="description" name="dc:description"></textarea>
+
+        <!-- Rights -->
+        <label for="rights">Rights:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">Information about rights held in and over the resource.</span>
+            </span>
+        </label>
+        <input type="text" id="rights" name="dc:rights">
+
+        <!-- Type -->
+        <label for="type">Type:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">The nature or genre of the resource.</span>
+            </span>
+        </label>
+        <input type="text" id="type" name="dc:type">
+
+        <!-- Language -->
+        <label for="language">Language:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">A language of the resource. Preferably a controlled vocabulary such as ISO 639-1.</span>
+            </span>
+        </label>
+        <input type="text" id="language" name="dc:language">
+
+        <!-- Contributor -->
+        <label for="contributor">Contributor:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">An entity responsible for making contributions to the resource.</span>
+            </span>
+        </label>
+        <input type="text" id="contributor" name="dc:contributor">
+
+        <!-- Source -->
+        <label for="source">Source:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">A related resource from which the described resource is derived.</span>
+            </span>
+        </label>
+        <input type="text" id="source" name="dc:source">
+
+        <!-- Coverage -->
+        <label for="coverage">Coverage:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</span>
+            </span>
+        </label>
+        <input type="text" id="coverage" name="dc:coverage">
+
+        <!-- Subject -->
+        <label for="subject">Subject:
+            <span class="tooltip-icon">ℹ️
+                <span class="tooltip-text">The topic of the resource. Typically, the subject will be represented using keywords, key phrases, or classification codes.</span>
+            </span>
+        </label>
+        <input type="text" id="subject" name="dc:subject">
+
+        <!-- Additional elements can be added following the same pattern -->
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
